@@ -43,7 +43,7 @@ const Home = () => {
           </li>
           
           <li class="project-item">
-            <Link href="/insaneus" shallow={true}><a>Insaneus</a></Link>
+            <a href="https://top.gg/bot/758389658286817340" target="_blank">Insaneus</a>
             <br/>
             A multifunctional Discord Bot.
           </li>
