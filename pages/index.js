@@ -31,11 +31,10 @@ export default function Home () {
 
         <p className="mini-title">My Projects</p>
         <ul className="project-list">
-          <ProjectItem name="URL Shortener" url="https://vasc.dev/s" description="Make your long URLs smaller."/>
-          <ProjectItem name="SpeedUHC" url="https://github.com/vascYT/SpeedUHC-Plugin" description="A Minecraft Plugin for the gamemode SpeedUHC."/>
+          <ProjectItem name="SpeedUHC" url="https://github.com/vascYT/SpeedUHC-Plugin" description="A Minecraft Plugin for the popular SpeedUHC gamemode."/>
           <ProjectItem name="Insaneus" url="/insaneus" description="A multifunctional Discord Bot."/>
-          <ProjectItem name="CS:GO Tracker" url="https://top.gg/bot/770019524614815745" description="A Discord Bot that tracks the price for CS:GO items."/>
-          <ProjectItem name="CS:GO Live" url="https://csgolive.vasc.dev" description="A Website that tracks the CS:GO Client using the gamestate integration feature."/>
+          <ProjectItem name="CS:GO Tracker" url="https://top.gg/bot/770019524614815745" description="A Discord Bot that tracks the price of CS:GO items."/>
+          <ProjectItem name="CS:GO Live" url="https://csgolive.vasc.dev" description="A website that tracks the CS:GO client using the gamestate integration feature."/>
         </ul>
       </div>
     </div>
