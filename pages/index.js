@@ -1,9 +1,11 @@
 import Head from 'next/head';
-import ProjectItem from "../elements/projectItem";
+import ProjectItem from "../components/ProjectItem";
+import LinkItem from "../components/LinkItem";
+import ItemsTitle from "../components/ItemsTitle";
 
 export default function Home () {
   return (
-    <div>
+    <div className="text-white font-sans">
       <Head>
         <meta charSet="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -15,26 +17,26 @@ export default function Home () {
         <script src="/assets/typed.min.js"/>
         <title>I'm vasc</title>
       </Head>
-      <div className="container">
-        <h1 className="title">I'm vasc</h1>
-        <h1 className="subtitle"></h1>
+      <div className="absolute mt-32 ml-56">
+        <h1 className="text-8xl font-bold">I'm vasc</h1>
+        <h1 id="typed" className="h-10 text-4xl text-gray-300 mt-3"></h1>
 
-        <p className="mini-title">Useful Links</p>
-        <ul className="social-list">
-          <li className="social-item"><a href="https://twitter.com/vascyt" target="_blank">Twitter</a></li>
-          <li className="social-item"><a href="https://youtube.com/vascyt" target="_blank">YouTube</a></li>
-          <li className="social-item"><a href="https://discord.banany.net" target="_blank">Discord Server</a></li>
-          <li className="social-item"><a href="https://paypal.me/vascyt" target="_blank">PayPal</a></li>
-          <li className="social-item"><a href="https://steamcommunity.com/profiles/76561198362939816" target="_blank">Steam Profile</a></li>
-          <li className="social-item"><a href="mailto:contact@vasc.dev">E-Mail</a></li>
+        <ItemsTitle title="Useful Links" />
+        <ul className="mt-3 space-y-1">
+          <LinkItem href="https://twitter.com/vascyt" name="Twitter"/>
+          <LinkItem href="https://youtube.com/vascyt" name="YouTube"/>
+          <LinkItem href="https://discord.banany.net" name="Discord Server"/>
+          <LinkItem href="https://paypal.me/vascyt" name="PayPal"/>
+          <LinkItem href="https://steamcommunity.com/profiles/76561198362939816" name="Steam Profile"/>
+          <LinkItem href="mailto:contact@vasc.dev" name="E-Mail"/>
         </ul>
 
-        <p className="mini-title">My Projects</p>
-        <ul className="project-list">
-          <ProjectItem name="SpeedUHC" url="https://github.com/vascYT/SpeedUHC-Plugin" description="A Minecraft Plugin for the popular SpeedUHC gamemode."/>
-          <ProjectItem name="Insaneus" url="/insaneus" description="A multifunctional Discord Bot."/>
-          <ProjectItem name="CS:GO Tracker" url="https://top.gg/bot/770019524614815745" description="A Discord Bot that tracks the price of CS:GO items."/>
-          <ProjectItem name="CS:GO Live" url="https://csgolive.vasc.dev" description="A website that tracks the CS:GO client using the gamestate integration feature."/>
+        <ItemsTitle title="My Projects" />
+        <ul className="mt-3 space-y-1.5">
+          <ProjectItem name="SpeedUHC" href="https://github.com/vascYT/SpeedUHC-Plugin" description="A Minecraft Plugin for the popular SpeedUHC gamemode."/>
+          <ProjectItem name="Insaneus" href="https://top.gg/bot/758389658286817340" description="A multifunctional Discord Bot."/>
+          <ProjectItem name="CS:GO Tracker" href="https://top.gg/bot/770019524614815745" description="A Discord Bot that tracks the price of CS:GO items."/>
+          <ProjectItem name="CS:GO Live" href="https://csgolive.vasc.dev" description="A website that tracks the CS:GO client using the gamestate integration feature."/>
         </ul>
       </div>
     </div>

@@ -1,5 +1,5 @@
 function type_animation() {
-    new Typed(".subtitle", { 
+    new Typed("#typed", { 
         strings: ["I create web apps.", "I create bots.", "I create plugins."], 
         typeSpeed: 50,
         backDelay: 600, 

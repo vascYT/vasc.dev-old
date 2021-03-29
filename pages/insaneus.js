@@ -1,9 +1,9 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from "next/head";
+import BackButton from "../components/BackButton";
 
 const Home = () => {
   return (
-    <div>
+    <div className="text-white font-sans">
       <Head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -13,12 +13,12 @@ const Home = () => {
         <title>I'm vasc</title>
       </Head>
       <div className="container">
-        <Link href="/" shallow={true}><a>...</a></Link>
-        <h1 className="title" style={{fontSize: '30px', marginTop: "15px"}}>Insaneus</h1>
+        <BackButton />
+        <h1 className="text-4xl font-bold mt-4 mb-2">Insaneus</h1>
         <p>
-          is a multifunctional Discord Bot, which makes use of the new <Link href="https://discord.com/developers/docs/interactions/slash-commands"><a style={{fontSize:"16px"}}>Slash Commands</a></Link> feature in Discord.
-          The bot gets a lot of features implemented, where it isn't worth making a own bot for it. If you are interested
-          and want to add this bot to your server you can do this by clicking <Link href="https://discord.com/oauth2/authorize?client_id=758389658286817340&permissions=8&scope=bot%20applications.commands"><a style={{fontSize:"16px"}}>this</a></Link> link.
+          is a multifunctional Discord Bot, which makes use of the new <a href="https://discord.com/developers/docs/interactions/slash-commands">Slash Commands</a> feature in Discord.
+          The bot gets a lot of features implemented, where it isn"t worth making a own bot for it. If you are interested
+          and want to add this bot to your server you can do this by clicking <a href="https://discord.com/oauth2/authorize?client_id=758389658286817340&permissions=8&scope=bot%20applications.commands">this</a> link.
         </p>
       </div>
 
