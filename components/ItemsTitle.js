@@ -1,6 +1,6 @@
-function ItemsTitle({title}) {
+function ItemsTitle(props) {
     return(
-        <p className="mt-12 text-2xl font-bold">{title}</p>
+        <p className="mt-12 text-2xl font-bold">{props.title}</p>
     )
 }
 

@@ -17,9 +17,9 @@ export default function Home () {
         <script src="/assets/typed.min.js"/>
         <title>I'm vasc</title>
       </Head>
-      <div className="absolute mt-32 ml-56">
-        <h1 className="text-8xl font-bold">I'm vasc</h1>
-        <h1 id="typed" className="h-10 text-4xl text-gray-300 mt-3"></h1>
+      <div className="absolute inset-y-13pt inset-x-13pt">
+        <h1 className="text-7xl sm:text-8xl font-bold">I'm vasc</h1>
+        <h1 id="typed" className="h-10 text-3xl sm:text-4xl text-gray-300 mt-3"></h1>
 
         <ItemsTitle title="Useful Links" />
         <ul className="mt-3 space-y-1">
