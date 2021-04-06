@@ -1,9 +1,11 @@
+import HoverAnimation from "./HoverAnimation";
+
 function LinkItem(props) {
     return(
       <li>
-        <a className="text-xl text-yellow-400 hover:bg-yellow-400 hover:text-white" href={props.href} target="_blank">
+        <HoverAnimation className="text-xl text-yellow-400" href={props.href}>
           {props.name}
-        </a>
+        </HoverAnimation>
       </li>
     )
 }
