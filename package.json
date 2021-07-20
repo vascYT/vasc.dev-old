@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@splitbee/web": "^0.2.4",
     "framer-motion": "^4.0.0",
     "next": "^10.0.0",
     "react": "17.0.1",
