@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>vasc</title>
+        <title>Home • vasc</title>
       </Head>
       <PageContainer>
         <div className="flex flex-col w-full text-center justify-center sm:flex-row sm:text-left sm:justify-start space-x-5">

@@ -4,7 +4,7 @@ export default function page() {
   return (
     <div className="flex h-screen text-white font-sans">
       <Head>
-        <title>404 - Not Found</title>
+        <title>404 • vasc</title>
       </Head>
       <div className="flex flex-row items-center p-5pt align-center space-x-5">
         <h1 className="text-7xl sm:text-8xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">

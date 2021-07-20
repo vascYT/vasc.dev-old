@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects @ vasc</title>
+        <title>Projects • vasc</title>
       </Head>
       <PageContainer>
         <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
