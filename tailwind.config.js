@@ -1,9 +1,10 @@
 module.exports = {
+  mode: "jit",
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false,
   theme: {
     fontFamily: {
-      "sans": ["Roboto"]
+      sans: ["Roboto"],
     },
     extend: {
       spacing: {
@@ -17,11 +18,11 @@ module.exports = {
         "5pt": "5%",
         "6pt": "6%",
         "7pt": "7%",
-      }
+      },
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
