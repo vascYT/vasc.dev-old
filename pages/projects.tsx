@@ -1,20 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
+import GithubRepos from "../components/GithubRepos";
 import PageContainer from "../components/PageContainer";
 import ProjectItem from "../components/ProjectItem";
-import useSWR from "swr";
-
-const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Projects() {
-  var { data: ghdata } = useSWR(
-    "https://api.github.com/users/vascYT/repos?per_page=100",
-    fetcher
-  );
-
-  if (ghdata)
-    ghdata = ghdata.filter((repo) => !repo.fork && repo.name != "vascYT");
-
   return (
     <>
       <Head>
@@ -58,14 +48,7 @@ export default function Projects() {
               ...on Github
             </h2>
             <div className="mt-3">
-              {ghdata &&
-                ghdata.map((repo) => (
-                  <ProjectItem
-                    name={repo.name}
-                    href={repo.html_url}
-                    description={repo.description}
-                  />
-                ))}
+              <GithubRepos />
             </div>
           </div>
         </div>
