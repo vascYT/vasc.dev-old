@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function page() {
+export default function NotFound() {
   return (
     <div className="flex h-screen text-white font-sans">
       <Head>

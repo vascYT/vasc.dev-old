@@ -1,9 +1,9 @@
 import Head from "next/head";
-import BackBar from "./BackBar";
-import Footer from "./Footer";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 export default function PageContainer(props) {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -21,18 +21,27 @@ export default function PageContainer(props) {
       </Head>
 
       <div className="text-white font-sans">
-        <div className="flex flex-col sm:flex-row justify-center sm:justify-start h-screen p-7pt">
+        <AnimatePresence>
           <motion.div
-            className="flex flex-col justify-center"
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.75 }}
-            style={{ opacity: 0 }}
+            key={router.route}
+            initial="pageInitial"
+            animate="pageAnimate"
+            exit="pageExit"
+            variants={{
+              pageInitial: {
+                opacity: 0,
+              },
+              pageAnimate: {
+                opacity: 1,
+              },
+              pageExit: {
+                opacity: 0,
+              },
+            }}
           >
-            <BackBar />
             {props.children}
           </motion.div>
-        </div>
-        <Footer />
+        </AnimatePresence>
       </div>
     </>
   );

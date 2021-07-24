@@ -4,6 +4,6 @@ import splitbee from "@splitbee/web";
 
 splitbee.init();
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps, router }) {
   return <Component {...pageProps} />;
 }
