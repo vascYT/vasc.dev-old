@@ -28,7 +28,7 @@ export default function GithubRepos() {
     );
   if (!data) return <></>;
 
-  data.filter((repo) => !repo.fork && repo.name != "vascYT");
+  data = data.filter((repo) => !repo.fork && repo.name != "vascYT");
   return data.map((repo) => (
     <ProjectItem
       name={repo.name}
