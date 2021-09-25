@@ -13,7 +13,7 @@ export default function Projects() {
       <PageContainer>
         {/* Center Content vertically */}
         <div className="flex flex-row justify-center h-screen w-screen">
-          <div className="mt-[10vh] mb-8">
+          <div className="mt-[10vh]">
             <Link href="/" shallow={true}>
               <a className="w-5">
                 <svg
@@ -47,7 +47,7 @@ export default function Projects() {
             <h2 className="text-sm text-gray-300 sm:text-xl mt-6 font-medium">
               ...on Github
             </h2>
-            <div className="mt-3">
+            <div className="mt-3 mb-8">
               <GithubRepos />
             </div>
           </div>

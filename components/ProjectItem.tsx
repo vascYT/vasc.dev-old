@@ -1,8 +1,15 @@
 import Image from "next/image";
+import { PropsWithChildren } from "react";
 
-function ProjectItem(props) {
+interface props {
+  href: string;
+  name: string;
+  description: string;
+  imgUrl?: string;
+}
+function ProjectItem(props: PropsWithChildren<props>) {
   return (
-    <div className="bg-gray-600 bg-opacity-50 p-4 rounded mb-5 w-[256px] sm:w-[512px]">
+    <div className="bg-gray-600 bg-opacity-50 p-4 rounded mt-5 w-[256px] sm:w-[512px]">
       <a className="text-xl text-yellow-400" href={props.href}>
         {props.name}
       </a>

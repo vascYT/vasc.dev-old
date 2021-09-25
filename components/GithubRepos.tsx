@@ -1,16 +1,15 @@
 import axios from "axios";
 import useSWR from "swr";
+import { GithubRepo } from "../typings/GithubAPI";
 import ProjectItem from "./ProjectItem";
 
-const fetcher = (url) => axios.get(url).then((res) => res.data);
+const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
 export default function GithubRepos() {
   var { data, error } = useSWR(
     "https://api.github.com/users/vascYT/repos?per_page=100",
     fetcher
   );
-
-  console.log(error);
 
   if (error)
     return (
@@ -28,8 +27,8 @@ export default function GithubRepos() {
     );
   if (!data) return <></>;
 
-  data = data.filter((repo) => !repo.fork && repo.name != "vascYT");
-  return data.map((repo) => (
+  data = data.filter((repo: GithubRepo) => !repo.fork && repo.name != "vascYT");
+  return data.map((repo: GithubRepo) => (
     <ProjectItem
       name={repo.name}
       href={repo.html_url}

@@ -1,8 +1,10 @@
 import Head from "next/head";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
+import { PropsWithChildren } from "react";
 
-export default function PageContainer(props) {
+interface props {}
+export default function PageContainer(props: PropsWithChildren<props>) {
   const router = useRouter();
   return (
     <>

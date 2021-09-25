@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import PageContainer from "../components/PageContainer";
-import Twemoji from "react-twemoji";
 import SocialGallery from "../components/SocialGallery";
 import DiscordActivity from "../components/DiscordActivity";
 
