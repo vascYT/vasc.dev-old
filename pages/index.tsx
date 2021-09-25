@@ -6,6 +6,18 @@ import SocialGallery from "../components/SocialGallery";
 import DiscordActivity from "../components/DiscordActivity";
 
 export default function Home() {
+  const getAge = () => {
+    const today = new Date();
+    const birthDate = new Date("05/13/2006");
+    var age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+
+    return age;
+  };
+
   return (
     <>
       <Head>
@@ -35,7 +47,7 @@ export default function Home() {
                 </div>
                 <DiscordActivity />
                 <p className="text-gray-300 mt-2 text-sm sm:text-base">
-                  15 y/o developer and server enthusiast.
+                  {getAge()} y/o developer and server enthusiast.
                 </p>
                 <div className="self-start mt-3">
                   <Link href="/projects" shallow={true}>
