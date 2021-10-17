@@ -1,6 +1,8 @@
 import Head from "next/head";
+import { PropsWithChildren } from "react";
 
-export default function SocialGallery(props) {
+interface props {}
+export default function SocialGallery(props: PropsWithChildren<props>) {
   return (
     <>
       <Head>
