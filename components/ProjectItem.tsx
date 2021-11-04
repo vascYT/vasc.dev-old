@@ -1,27 +1,34 @@
-import Image from "next/image";
 import { PropsWithChildren } from "react";
+import { BiStar, BiGitRepoForked } from "react-icons/bi";
 
 interface props {
   href: string;
   name: string;
   description: string;
-  imgUrl?: string;
+  stars: number;
+  forks: number;
 }
-function ProjectItem(props: PropsWithChildren<props>) {
+export default function ProjectItem(props: PropsWithChildren<props>) {
   return (
-    <div className="bg-gray-600 bg-opacity-50 p-4 rounded mt-5 w-[256px] sm:w-[512px]">
-      <a className="text-xl text-yellow-400" href={props.href}>
-        {props.name}
-      </a>
+    <div className="bg-white bg-opacity-10 rounded-md border-2 border-[#00000025] p-4 mt-5 mb-6 w-full">
+      <div className="inline-flex items-center space-x-3">
+        <a
+          className="text-xl text-yellow-400 hover:underline"
+          href={props.href}
+        >
+          {props.name}
+        </a>
+        <div className="inline-flex items-center space-x-1">
+          <BiStar />
+          <span>{props.stars}</span>
+        </div>
+        <div className="inline-flex items-center space-x-1">
+          <BiGitRepoForked />
+          <span>{props.forks}</span>
+        </div>
+      </div>
       <br />
       <p className="text-gray-300">{props.description}</p>
-      {props.imgUrl && (
-        <div className="h-[144px] sm:h-[288px] aspect-w-16 aspect-h-9 relative mt-5">
-          <Image layout="fill" src={props.imgUrl} className="rounded" />
-        </div>
-      )}
     </div>
   );
 }
-
-export default ProjectItem;

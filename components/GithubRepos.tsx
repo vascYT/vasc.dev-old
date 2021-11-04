@@ -2,6 +2,7 @@ import axios from "axios";
 import useSWR from "swr";
 import { GithubRepo } from "../typings/GithubAPI";
 import ProjectItem from "./ProjectItem";
+import { VscLoading } from "react-icons/vsc";
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
@@ -13,8 +14,8 @@ export default function GithubRepos() {
 
   if (error)
     return (
-      <p>
-        Couldn't fetch Github repositories, please view them on my{" "}
+      <p className="text-red-400 mt-5">
+        Failed to fetch Github repositories, please view them on my{" "}
         <a
           className="text-yellow-400"
           href="https://github.com/vascYT"
@@ -25,7 +26,11 @@ export default function GithubRepos() {
         .
       </p>
     );
-  if (!data) return <></>;
+
+  if (!data)
+    return (
+      <VscLoading className="animate-spin text-4xl w-full text-center mt-5" />
+    );
 
   data = data.filter((repo: GithubRepo) => !repo.fork && repo.name != "vascYT");
   return data.map((repo: GithubRepo) => (
@@ -33,6 +38,8 @@ export default function GithubRepos() {
       name={repo.name}
       href={repo.html_url}
       description={repo.description}
+      stars={repo.stargazers_count}
+      forks={repo.forks_count}
     />
   ));
 }
