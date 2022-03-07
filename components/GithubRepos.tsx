@@ -1,15 +1,11 @@
-import axios from "axios";
 import useSWR from "swr";
 import { GithubRepo } from "../typings/GithubAPI";
 import ProjectItem from "./ProjectItem";
 import { VscLoading } from "react-icons/vsc";
 
-const fetcher = (url: string) => axios.get(url).then((res) => res.data);
-
 export default function GithubRepos() {
   var { data, error } = useSWR(
-    "https://api.github.com/users/vascYT/repos?per_page=100",
-    fetcher
+    "https://api.github.com/users/vascYT/repos?per_page=100"
   );
 
   if (error)
