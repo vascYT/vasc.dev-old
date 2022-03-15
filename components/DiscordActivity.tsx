@@ -19,16 +19,17 @@ export default function DiscordActivity() {
       <div className="animate-pulse h-2 w-2 rounded-full bg-green-300"></div>
       <span className="text-green-300 text-sm">
         {activity.listening_to_spotify ? (
-          <span>
-            Listening to{" "}
+          <>
+            Listening to <span className="font-bold mr-[1.5px]">`</span>
             <a
               href={`https://open.spotify.com/track/${activity.spotify?.track_id}`}
-              target="_blank"
               className="hover:underline"
+              target="_blank"
             >
-              "{activity.spotify?.song}"
+              {activity.spotify?.song}
             </a>
-          </span>
+            <span className="font-bold ml-[1.5px]">`</span>
+          </>
         ) : (
           `Playing ${activity.activities[0].name}`
         )}

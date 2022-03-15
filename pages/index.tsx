@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import DiscordActivity from "../components/DiscordActivity";
+import Projects from "../components/Projects";
 
 export default function Home() {
   const getAge = () => {
@@ -52,6 +53,13 @@ export default function Home() {
             Java, PHP, but Javascript/Typescript is my favorite and therefore my
             primary programming language.
           </p>
+        </div>
+
+        <div className="mt-5 mb-5">
+          <h1 className="text-3xl font-bold text-gray-300">What I Built 🏗️</h1>
+          <div className="mt-3">
+            <Projects />
+          </div>
         </div>
       </div>
     </>

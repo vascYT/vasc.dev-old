@@ -15,7 +15,7 @@ export default function NotFound() {
         <p className="text-xl">Not the 🍌 you are looking for.</p>
         <Link href="/">
           <a className="inline-flex items-center mt-5">
-            <BsArrowLeftShort className="text-xl" /> Back to home
+            <BsArrowLeftShort className="text-xl" /> Back
           </a>
         </Link>
       </div>

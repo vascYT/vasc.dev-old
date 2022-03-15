@@ -1,6 +1,7 @@
-import { PropsWithChildren } from "react";
 import Link from "next/link";
-import SocialGallery from "./SocialGallery";
+import Socials from "./Socials";
+
+const links = ["/"];
 
 function Item(props: { link: string }) {
   return (
@@ -10,17 +11,17 @@ function Item(props: { link: string }) {
   );
 }
 
-interface props {}
-export default function Navbar(props: PropsWithChildren<props>) {
+export default function Navbar() {
   return (
     <div className="flex text-white w-full pl-6 pr-6 pt-8 pb-8">
       <div className="w-full space-x-6">
-        <Item link="/" />
-        <Item link="/projects" />
+        {links.map((link) => (
+          <Item link={link} />
+        ))}
       </div>
 
       <div className="flex items-end">
-        <SocialGallery />
+        <Socials />
       </div>
     </div>
   );

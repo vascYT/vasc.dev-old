@@ -11,7 +11,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body className="bg-secondary text-white">
+      <body className="bg-gradient-to-br from-black to-[#303030] text-white font-sans">
         <Main />
         <NextScript />
       </body>

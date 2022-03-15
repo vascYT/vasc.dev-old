@@ -31,7 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
             fetch(resource, init).then((r) => r.json()),
         }}
       >
-        <div className="text-white font-sans flex flex-row justify-center w-screen min-h-screen md:p-0">
+        <div className="flex flex-row justify-center w-screen min-h-screen md:p-0">
           <div className="w-full md:w-[800px]">
             <Navbar />
             <AnimatePresence exitBeforeEnter>
@@ -41,7 +41,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 animate="pageAnimate"
                 exit="pageExit"
                 transition={{ type: "linear" }}
-                className="pl-10 pr-10"
+                className="px-5"
                 variants={{
                   pageInitial: {
                     opacity: 0,
