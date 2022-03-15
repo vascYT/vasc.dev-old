@@ -47,12 +47,12 @@ function Card(props: {
           </div>
         </div>
         <button
-          className={`hover:bg-white/10 p-2 rounded-full transition-transform ${
-            open && "rotate-180"
-          }`}
+          className="hover:bg-white/10 p-2 rounded-full"
           onClick={() => setOpen(!open)}
         >
-          <IoIosArrowDown />
+          <IoIosArrowDown
+            className={`transition-transform ${open && "rotate-180"}`}
+          />
         </button>
       </div>
       <AnimatePresence>
