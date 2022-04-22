@@ -23,11 +23,16 @@ export default function Home() {
       </Head>
       <div className="mt-6">
         <div className="sm:flex sm:items-center sm:space-x-5">
-          <Image src="/assets/avatar.png" width={125} height={125} />
+          <Image
+            src="/assets/avatar.png"
+            width={125}
+            height={125}
+            alt="vasc's avatar"
+          />
 
           <div>
             <div className="text-5xl sm:text-6xl font-bold text-gray-300">
-              <span>Hey, I'm </span>
+              <span>Hey, I&apos;m </span>
               <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
                 vasc
               </span>
@@ -38,15 +43,16 @@ export default function Home() {
 
         <div className="text-gray-300 text-base leading-relaxed mt-5">
           <p>
-            I'm a {getAge()} y/o developer from Vienna, Austria{" "}
+            I&apos;m a {getAge()} y/o developer from Vienna, Austria{" "}
             <Image
               src="/assets/austria.svg"
               height={12}
               width={16}
               className="rounded-sm"
+              alt="Austrian Flag"
             />
-            . I'm mainly interested in web development and server software. I
-            also love to explore new technologies and tools made by others.
+            . I&apos;m mainly interested in web development and server software.
+            I also love to explore new technologies and tools made by others.
           </p>
           <p className="mt-5">
             I have tried some different programming languages, such as Python,

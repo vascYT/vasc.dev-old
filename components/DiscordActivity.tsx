@@ -25,6 +25,7 @@ export default function DiscordActivity() {
               href={`https://open.spotify.com/track/${activity.spotify?.track_id}`}
               className="hover:underline"
               target="_blank"
+              rel="noreferrer"
             >
               {activity.spotify?.song}
             </a>

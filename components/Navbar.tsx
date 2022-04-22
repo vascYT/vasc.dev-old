@@ -16,7 +16,7 @@ export default function Navbar() {
     <div className="flex text-white w-full pl-6 pr-6 pt-8 pb-8">
       <div className="w-full space-x-6">
         {links.map((link) => (
-          <Item link={link} />
+          <Item link={link} key={link} />
         ))}
       </div>
 

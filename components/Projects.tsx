@@ -15,6 +15,7 @@ function Card(props: {
   stars?: number;
   forks?: number;
   archived?: boolean;
+  homepage?: string;
 }) {
   const [open, setOpen] = useState(false);
 
@@ -65,14 +66,28 @@ function Card(props: {
             className="mb-3 border-t border-white/20 px-4"
           >
             <p className="text-gray-300 mt-3">{props.description}</p>
-            <a
-              className="flex items-center w-fit space-x-1 bg-white bg-opacity-20 rounded-full px-5 py-2 text-sm mt-3 transition-transform hover:scale-[102%]"
-              href={props.url}
-              target="_blank"
-            >
-              <span>View</span>
-              <FiExternalLink />
-            </a>
+            <div className="flex flex-row items-center space-x-2">
+              {props.homepage && (
+                <a
+                  className="flex items-center w-fit space-x-1 bg-white bg-opacity-20 rounded-full px-5 py-2 text-sm mt-3 transition-transform hover:scale-[102%]"
+                  href={props.homepage}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>Website</span>
+                  <FiExternalLink />
+                </a>
+              )}
+              <a
+                className="flex items-center w-fit space-x-1 bg-white bg-opacity-20 rounded-full px-5 py-2 text-sm mt-3 transition-transform hover:scale-[102%]"
+                href={props.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>GitHub</span>
+                <FiExternalLink />
+              </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -93,6 +108,7 @@ export default function Projects() {
           className="text-yellow-400"
           href="https://github.com/vascYT"
           target="_blank"
+          rel="noreferrer"
         >
           Github Profile
         </a>
@@ -123,6 +139,8 @@ export default function Projects() {
           stars={repo.stargazers_count}
           forks={repo.forks_count}
           archived={repo.archived}
+          key={repo.id}
+          homepage={repo.homepage}
         />
       ))}
     </div>

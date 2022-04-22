@@ -32,6 +32,8 @@ export default function SocialGallery() {
             href={link.url}
             className="transition-transform hover:scale-105"
             target={link.newTab ? "_blank" : undefined}
+            rel="noreferrer"
+            key={link.url}
           >
             <link.icon />
           </a>
