@@ -24,12 +24,12 @@ export default function Home() {
       <div className="mt-6">
         <div className="sm:flex sm:items-center sm:space-x-5">
           <Image
-            src="/assets/avatar.png"
+            src="https://avatars.githubusercontent.com/u/39592306"
             width={125}
             height={125}
             alt="vasc's avatar"
+            className="rounded-full"
           />
-
           <div>
             <div className="text-5xl sm:text-6xl font-bold text-gray-300">
               <span>Hey, I&apos;m </span>
