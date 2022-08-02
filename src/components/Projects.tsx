@@ -21,6 +21,7 @@ function Card(props: {
     >
       <img
         src={props.thumbnail}
+        alt={`${props.title} thumbnail`}
         className="w-full h-[128px] object-cover object-top rounded-t-md"
       />
       <div className="flex items-center px-4">
