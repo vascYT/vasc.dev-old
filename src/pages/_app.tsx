@@ -1,9 +1,8 @@
 import "tailwindcss/tailwind.css";
 import "../styles/global.css";
 import "react-loading-skeleton/dist/skeleton.css";
+
 import { AppProps } from "next/app";
-import ReactGA from "react-ga";
-import { useEffect } from "react";
 import nprogress from "nprogress";
 import Router, { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
@@ -16,11 +15,6 @@ Router.events.on("routeChangeComplete", nprogress.done);
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
-
-  useEffect(() => {
-    ReactGA.initialize("UA-150201105-4");
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  });
 
   return (
     <>
