@@ -49,8 +49,9 @@ function Card(props: {
           >
             <p className="text-gray-300 mt-3">{props.description}</p>
             <div className="flex flex-row items-center space-x-2">
-              {props.buttons.map((button) => (
+              {props.buttons.map((button, i) => (
                 <a
+                  key={i}
                   className="flex items-center w-fit space-x-1 bg-white bg-opacity-20 rounded-full px-5 py-2 text-sm mt-3 transition-transform hover:scale-[102%]"
                   href={button.url}
                   target="_blank"
